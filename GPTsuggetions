@@ -1,0 +1,52 @@
+The structure would be to use ReactJs and react-routers as frontend, MongoDB as the primary database, Node.js as the application server, and Express as the web framework. MongoDB can be used to store and query data, Node.js can be used to run the application logic.
+
+The folder structure for this project could be as follows: 
+- src 
+  - components 
+  - pages 
+  - routes 
+  - utils 
+- config 
+- models 
+- public 
+- server 
+- tests 
+
+src: This folder contains all the React components, pages, routes, and utility functions.
+
+config: This folder contains all the configuration files. 
+
+models: This folder contains the MongoDB models. 
+
+public: This folder contains all the public assets such as images, CSS, and JavaScript files.
+
+server: This folder contains the Node.js server application.
+
+tests: This folder contains all the tests for the application.
+
+what shold be in folders util & Config? Explain briefly with code.
+
+The utils folder contains all the utility functions such as helper functions, utility functions, and other general functions that can be used throughout the application. 
+
+Examples of utility functions could include:
+
+// Function to format a date
+export const formatDate = (date) => {
+  return moment(date).format('DD-MM-YYYY');
+}
+
+// Function to get the difference between two dates
+export const getDateDifference = (date1, date2) => {
+  const diff = moment(date2).diff(moment(date1));
+  return moment.duration(diff).humanize();
+}
+
+The config folder contains all the configuration files such as environment variables, database credentials, etc. 
+
+Example of config file:
+
+export default {
+  dbUrl: process.env.DB_URL || 'mongodb://localhost:27017/mydb',
+  port: process.env.PORT || 3000,
+  secret: process.env.SECRET || 'mysecretkey'
+}
